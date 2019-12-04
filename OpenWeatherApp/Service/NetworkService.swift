@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-let APPID = "0fd65ae8051cec4f21c386659c25955b"
+let APPID = ""
 
 public class WebService {
   
