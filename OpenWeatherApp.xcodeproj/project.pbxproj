@@ -17,6 +17,7 @@
 		87334A4C2397BC100067A0EC /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87334A4B2397BC100067A0EC /* Weather.swift */; };
 		87334A4E2397BCB90067A0EC /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87334A4D2397BCB90067A0EC /* ParseHelper.swift */; };
 		87334A502397BD230067A0EC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87334A4F2397BD230067A0EC /* NetworkService.swift */; };
+		877E215C239A52C80055A3A0 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877E215B239A52C80055A3A0 /* WeatherViewModel.swift */; };
 		E1965ACD0846211902DCCB05 /* Pods_OpenWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25DD7E5956D7A5AF0FE6E7C /* Pods_OpenWeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		87334A4B2397BC100067A0EC /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		87334A4D2397BCB90067A0EC /* ParseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		87334A4F2397BD230067A0EC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		877E215B239A52C80055A3A0 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		8EFD81605BD6A35904F723DF /* Pods-OpenWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-OpenWeatherApp/Pods-OpenWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		C25DD7E5956D7A5AF0FE6E7C /* Pods_OpenWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				87334A472396A0790067A0EC /* MainListTableView.swift */,
+				877E215B239A52C80055A3A0 /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				87334A4C2397BC100067A0EC /* Weather.swift in Sources */,
 				87334A482396A0790067A0EC /* MainListTableView.swift in Sources */,
 				87334A4A2396A3270067A0EC /* CityTableViewCell.swift in Sources */,
+				877E215C239A52C80055A3A0 /* WeatherViewModel.swift in Sources */,
 				87334A1423968F800067A0EC /* AppDelegate.swift in Sources */,
 				87334A502397BD230067A0EC /* NetworkService.swift in Sources */,
 				87334A4E2397BCB90067A0EC /* ParseHelper.swift in Sources */,
@@ -537,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OpenWeatherApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -556,7 +560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OpenWeatherApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

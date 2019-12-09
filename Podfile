@@ -7,6 +7,6 @@ target 'OpenWeatherApp' do
   # Pods for OpenWeatherApp
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'Alamofire', '~> 5.0.0-beta.5'
-	pod 'Kingfisher', '~> 5.0'
+	pod 'Kingfisher', '~> 5.3.1'
 
 end

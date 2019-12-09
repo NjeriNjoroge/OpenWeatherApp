@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Weather {
+struct Weather: Codable {
   
-  var cityName: String
+  let name: String
   let temperature: Double
   let weatherIcon: String
   let wind: Double
   let clouds: String
-  
 }
+

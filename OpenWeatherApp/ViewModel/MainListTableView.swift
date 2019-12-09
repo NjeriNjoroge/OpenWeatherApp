@@ -10,7 +10,7 @@ import UIKit
 
 class MainListTableView: UIViewController {
   
-  let cellID = "cell"
+  private let viewModel = WeatherViewModel()
   
   lazy var tableView: UITableView = {
     let tableView = UITableView()
@@ -24,9 +24,11 @@ class MainListTableView: UIViewController {
       super.viewDidLoad()
       view.backgroundColor = .white
       self.title = "Weather"
-      
-      tableView.register(CityTableViewCell.self, forCellReuseIdentifier: cellID)
+
+      tableView.register(CityTableViewCell.self, forCellReuseIdentifier: CityTableViewCell.reuseIdentifier)
       setupTableViewConstraints()
+      
+      attemptWeatherFetch()
     }
   
   fileprivate func setupTableViewConstraints() {
@@ -38,17 +40,29 @@ class MainListTableView: UIViewController {
       tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
       tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
     ])
-
   }
+  
+  private func attemptWeatherFetch() {
+    viewModel.fetchWeather { (weather) in
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+    }
+  }
+  
 }
 
 extension MainListTableView: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return viewModel.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! CityTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.reuseIdentifier, for: indexPath) as! CityTableViewCell
+    
+    cell.cityNameLabel.text  = viewModel.cityName
+    cell.temperatureLabel.text = "\(viewModel.temperature) K"
+    cell.weatherIconImageView.kf.setImage(with: viewModel.weatherIconUrl)
     
     return cell
   }

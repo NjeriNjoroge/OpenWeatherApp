@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CityTableViewCell: UITableViewCell {
+  
+  public static let reuseIdentifier = "cell"
   
   lazy var cityNameLabel: UILabel = {
       let label = UILabel()
@@ -19,7 +22,7 @@ class CityTableViewCell: UITableViewCell {
   
   lazy var temperatureLabel: UILabel = {
       let label = UILabel()
-      label.text = "21C"
+      label.text = "21 K"
       label.translatesAutoresizingMaskIntoConstraints = false
       return label
   }()
@@ -27,7 +30,7 @@ class CityTableViewCell: UITableViewCell {
   lazy var weatherIconImageView: UIImageView = {
       let imageView = UIImageView()
       imageView.translatesAutoresizingMaskIntoConstraints = false
-    imageView.image = UIImage(named: "19")
+      imageView.image = UIImage(named: "19")
       imageView.contentMode = .scaleAspectFit
       imageView.clipsToBounds = true
       imageView.layer.cornerRadius = 12.5

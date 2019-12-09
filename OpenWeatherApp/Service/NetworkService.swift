@@ -12,7 +12,7 @@ import SwiftyJSON
 
 let APPID = ""
 
-public class WebService {
+public class NetworkService {
   
   typealias _completion = (JSON?, Error?, Bool) -> Void
   fileprivate static let isValidDefaultValue: Bool = true
@@ -38,8 +38,8 @@ public class WebService {
             print("statuscode \(requestName) \(statuscode)")
             completionHandler(json)
 
-          } catch {
-            
+          } catch(let error) {
+            print(error)
           }
         case .failure(let error):
           print("error \(requestName) \(error)")
